@@ -1,0 +1,165 @@
+\documentclass[
+10pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+oneside, % One page layout (no page indentation)
+%twoside, % Two page layout (page indentation for binding and different headers)
+headinclude,footinclude, % Extra spacing for the header and footer
+BCOR5mm, % Binding correction
+]{scrartcl}
+
+\input{structure.tex} 
+\hyphenation{Fortran hy-phen-ation} 
+\title{\normalfont\spacedallcaps{Article Title}} % The article title
+\subtitle{Topic: Ethics and information security} % The article theme
+\author{Yinqiao Li} % The article author
+\date{2024.03.29} % An optional date to appear under the author(s)
+
+\begin{document}
+\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}} % The header for all pages (oneside) or for even pages (twoside)
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection~#1}} % Uncomment when using the twoside option - this modifies the header on odd pages
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+\pagestyle{scrheadings} % Enable the headers specified in this block
+\maketitle % Print the title/author/date block
+\setcounter{tocdepth}{2} % Set the depth of the table of contents to show sections and subsections only
+\tableofcontents % Print the table of contents
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+\section*{Abstract} % This section will not appear in the table of contents due to the star (\section*)
+This part is less than 200 words.
+%----------------------------------------------------------------------------------------
+%	AUTHOR AFFILIATIONS
+%----------------------------------------------------------------------------------------
+\let\thefootnote\relax\footnotetext{\textit{Joint Institute, Central China Normal University, University of Wollongong}}
+\newpage % Start the article content on the second page, remove this if you have a longer abstract that goes onto the second page
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+\section{Introduction}
+% Background
+In recent years, the incidence of data breaches and security issues has surged dramatically. 
+In 2017, approximately 5 million medical records were exposed globally, and by 2018, that number had tripled. 
+The same issues of information security and ethics are even more severe in other industries, making the protection of information security an urgent matter.
+% Due care 
+Define due care as the level of care that a reasonably prudent person would exercise under similar circumstances, according to Webster's dictionary.
+In business, due care is the effort made by aprudent party to avoid harm from another party to protect its interests. 
+In the field of Infosec, due care specifies a more focused and specific meaning.
+It is the effort made by an organization to protect the information of its customers, employees, and other stakeholders, in case of a data breach or other information security incident, 
+specifically, in the aspects of physical security, operations security, communications security, network security, and information security.
+% Due diligence, difference.
+In contrast to due care, the concept of due diligence is the complementary counterpart of due care.
+While due care represents the continuous effort for Infosec objectives made by organizations, due diligence is characterized by spontaneous investigations of human nature, preventing harm from the perspective of the independent individual.
+In the information era, the complication of security protection mission can be viewed as a nightmare. The complexity of the network, the diversity of the information, and the rapid development of technology devices, all of these factors make the Infosec protection more difficult.
+% Policy and Law
+The implementation of due care and due diligence highly relies on the development and enforcement of robust policies. 
+Policies are structured guidelines that outline the organization's approach to maintaining due care and conducting due diligence. 
+They are the documented standards and procedures that articulate the organization's commitment to Infosec and the expectations for behavior of the organization. 
+Policies act as the structural underpinning for due care, contrasting with laws, which are established societal mandates, serving as a roadmap for decision-making and provide a clear framework for the organization's response to the dynamic landscape of cyber threats.
+While policies navigate internal conduct, laws set the binding legal standards. Due diligence involves the proactive pursuit of potential Infosec vulnerabilities. 
+Both stand as fundamental tenets of cybersecurity, ensuring that an organization's practices adhere to both legal obligations and ethical standards.
+% Mini conclusion
+Due care in Infosec is an organization's dedicated effort to protect against data breaches, a mandate that has grown in complexity with technological evolution. 
+This principle, alongside due diligence, forms the bedrock of robust cybersecurity policies. 
+Policies, distinct from but informed by laws, provide a structured approach to navigate the intricate network of Infosec challenges, ensuring that ethical standards and legal compliance are met.
+Together, they create a cohesive framework that underpins an organization's commitment to securing its digital landscape.
+%----------------------------------------------------------------------------------------
+%	METHODS
+%----------------------------------------------------------------------------------------
+\section{Foundations and Strategies for Information Security}
+In this section, the foundations and strategies for ethical information security, including the concept of due care, due diligence, policy, and law, and the three general categories of unethical and illegal behavior will be discussed.
+Due care and due diligence are two fundamental concepts in the field of information security, and they are closely related to the policy and law, which are the foundation of the ethical information security.
+The interrelationship between these concepts and the three general categories of unethical and illegal behavior will be discussed in this section.
+%------------------------------------------------
+\subsection{Due cares versus due diligence}
+In cybersecurity, due cares include regular updates to security protocols, ongoing staff training, and prompt responses to known vulnerabilities.
+Here we will answer two questions.
+\begin{enumerate}[noitemsep]
+    \item Why should an organization make sure to exercise due care in its usual course of operation?
+    \item Why due care and due diligence are both important?
+\end{enumerate}
+Many information security breaches are not caused by inadequate protection methods, but rather by a lack of continuity in management practices.
+Therefore, The organization should make sure to exercise due care in its usual course of operation continuously in order to protect the rights of multi-party stakeholders.
+% 解答持续性的必要
+% 引用 持续性的必要
+Marko Niemimaa and Marko concluded that the necessity of continuous due care in Infosec based on conceptual foundations for IS continuity\cite{niemimaa2017information}.
+In the actual IT industry, whether it's technology, products, or equipment, everything is constantly being updated, and inevitably, there are threats to information security. 
+They pointed out several reasons an organizations should make sure to exercise due care in its usual course of operation, including liability, interests of stakeholders.
+It is crucial to continuously implement due care to maintain security.
+% 不同见解
+The effective implementation of due care is a self-assessment of regulations.
+Mostly, the due care exercise is entirely based on the organization's own regulations, however, due care can be examined by the employees themselves, from the research of Rossouw von Solms and S.H. Basie von Solms.
+% 引用 自我问卷评估方法
+Rossouw von Solms and S.H. Basie von Solms proposed a due care method to evaluate whether due care is properly implemented through several concise self-asked questions for staffs\cite{von2006information}. 
+% 为什么有了due care还要有due diligence
+On the other hand, due diligence is a process of assessment from a third party perspective, assessing potential cybersecurity risks, verifying the vendor’s compliance with relevant standards and laws, and continuously monitoring their performance and adherence to security protocols.
+% 引用 自我监督没吊用
+Garrett, R. D. et al. find voluntary commitment dedicated in due diligence had been proven ineffectual\cite{garrett2019criteria}.
+The emergence of multiple ethical issues indicates that relying solely on corporate voluntary commitments to resist unethical behavior is pale.
+% 引用 强调自我监督没吊用
+Sellare et al. pointed out that due diligence is a necessary complement to due care, and it is a necessary measure to prevent unethical behavior\cite{sellare2022six}.
+% 给出结论 自我监督没吊用
+Based on the penetration of several researches on due care and due diligence, it has been deduced that the effectiveness of non-mandory supervision is negligible on resolving ethical and security issues.
+%------------------------------------------------
+\subsection{Policy and Laws}
+In contrast, policies are the mandatary guidelines with responsibility enforcement, and laws are the societal mandates that are binding and compulsory.
+% 引用 Law的威慑性的意义
+Siponen et al. performed a research on the organizational compliance culture, discovering that deterrence plays a significant role in the actual adherence to policies, whereas incentives do not have a notable impact on policy compliance.
+Thus, the effective implementation of policies, due care and due diligence that discussed in the previous section, are highly dependent on the deterrence of laws.
+Legal deterrence not only has positive significance for employees to comply with rules and regulations to protect information security, but also appropriately adding legal knowledge to employee training can prevent companies from avoiding illegal and unethical circumstances.
+% 引用 Law培训的好处
+Crete-Nishihata et al. conducted a study on the effectiveness of law enforcement training, and found that law enforcement training is effective in reducing the number of illegal activities\cite{crete2020information}.
+The company's policies can be effectively implemented only under a legal and regulatory system with complete mandatory effect.
+% 接下来写Policy
+A law, being a structured set of rules for societal welfare and equity, is more formal, 
+however, a policy, functioning as a mere statement or document of future intentions, is comparatively informal.
+%------------------------------------------------
+\subsection{Three General Categories of Unethical and Illegal Behaviour}
+Three general categories of Unethical Behavior are:
+\begin{enumerate}[noitemsep]
+    \item Accident: who makes mistakes and result in threats to information
+    \item Intent: intent of doing wrong
+    \item Ignorance: they just don't know any better
+\end{enumerate}
+In regarding to address these three general categories of unethical and illegal behavior, many attempts have been made.
+% 引用事例
+As discussed in the previous, continuous awareness education and training has a overwhelming advantage compared with other methods like advanced technology, policies and laws.
+Although the deterrent influence of laws and policies is advantageous for encouraging employees to comply with regulations to safeguard information security, the effective enforcement of laws and policies largely depends on employees' self-regulation and self-awareness.
+Awareness of behavior constraints and norms proves to be most impactful. Thus, it is imperative for companies to strengthen educational efforts and training initiatives among employees to bolster their self-awareness and self-regulation abilities.
+
+%----------------------------------------------------------------------------------------
+%	RESULTS AND DISCUSSION
+%----------------------------------------------------------------------------------------
+
+\section{Discussion and Implications}
+Many researchers have studied several way to guarantee information security. 
+% abc
+Throughout the journey from regulation to implementation, from legislative formulation to the enactment of policies, 
+and taking into account the principles of due care and due diligence, 
+both managers and researchers have investigated and analyzed a multitude of approaches to ensure the security of information.
+% abc
+From a legislative perspective, countries are progressively refining their laws and regulations regarding information security. 
+Although some nations have been late starters, the efforts made by the majority of countries towards policy orientation in protecting information security are noticeable.
+% 引用，大量的国家在加强信息安全的立法，政策
+Kitsios et al. conducted a study on a program implemented in the information technology sector to ensure compliance with the International Organization for Standardization 27000.
+However, the authors found that a significant portion of risks went undetected and were overlooked after the company adopted these standards. 
+The rapid expansion and iteration of company operations and technology clearly demonstrated that a static and uniform security model is insufficient for modern information security needs\cite{kitsios2023iso}.
+% 引用，自我意识是关键，社会效应
+Differing from the focus on law and policy implementation emphasized by other researchers, Mikko et al. observed an inspiring phenomenon: 
+social influence, particularly the culture of compliance within a company, has a significant and positive impact on employees' adherence to information security practices.
+Drawing from their findings, awareness is key. The authors suggest that managers must guarantee the enlightening of personnel regarding cybersecurity dangers, 
+their potential impact, and the swiftness with which these threats can proliferate within the enterprise\cite{siponen2010compliance}. 
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+\section{Conclusion}
+This part 250 words.
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\section*{References}
+\renewcommand{\refname}{References} % Change the default name for the bibliography
+\bibliographystyle{unsrt} % Choose the bibliography style
+\bibliography{sample} % Specify the name of your .bib file without the extension
+\end{document}
