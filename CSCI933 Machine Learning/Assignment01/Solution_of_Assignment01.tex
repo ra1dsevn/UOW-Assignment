@@ -1,0 +1,115 @@
+\documentclass[12pt, a4paper, oneside]{article}
+\usepackage{amsmath, amsthm, amssymb, bm, graphicx, mathrsfs}
+\usepackage{hyperref} % Place hyperref package after all other packages
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+} 
+
+\title{\textbf{Assignment 01}}
+\author{Yinqiao Li}
+\date{\today}
+
+
+\newcounter{problemname}
+\newcounter{solutionname}[problemname] % New counter for solution
+\renewcommand{\thesolutionname}{\arabic{solutionname}} % Format of solution numbering
+\newenvironment{problem}{\stepcounter{problemname}\par\noindent\textsc{Problem \arabic{problemname}. }}{\\\par}
+\newenvironment{solution}{\stepcounter{solutionname}\par\noindent\textsc{Solution \thesolutionname. }}{\\\par}
+\newenvironment{note}{\par\noindent\textsc{Note of Problem \arabic{problemname}. }}{\\\par}
+
+\begin{document}
+
+\maketitle
+%第一题
+\begin{solution}
+    \\
+    \\Let $S=\begin{bmatrix} \frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}} \end{bmatrix}$ and $P=\begin{bmatrix} 1&3\\3&1 \end{bmatrix}$. Compute $SP$.
+    \[ SP = S \cdot P = \begin{bmatrix} \frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}} \end{bmatrix} \cdot \begin{bmatrix} 1&3\\3&1 \end{bmatrix} = \begin{bmatrix} 1&3\\1&-3 \end{bmatrix} \]
+    The transpose of $S$ is $S^T=\begin{bmatrix} \frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\-\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}} \end{bmatrix}$. 
+    Then we can compute $SPS^T$:
+    \[ SPS^T = SP \cdot S^T = \begin{bmatrix} 1&3\\1&-3 \end{bmatrix} \cdot \begin{bmatrix} \frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\-\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}} \end{bmatrix} = \begin{bmatrix} 4&0\\0&4 \end{bmatrix} \]
+    Obviously, $SPS^T$ is a diagonal matrix. So $SPS^T$ is a symmetric matrix.
+\end{solution}
+%第二题
+\begin{solution}
+    \\
+    \\Let \[S = \begin{bmatrix}
+        \cos \alpha & \sin \alpha \\
+        -\sin \alpha & \cos \alpha
+        \end{bmatrix} \]
+    (a) First we prove that $S$ is orthogonal.
+    \[ S^T = \begin{bmatrix}
+        \cos \alpha & -\sin \alpha \\
+        \sin \alpha & \cos \alpha
+        \end{bmatrix} \]
+    Then we calculate $S^T \cdot S$:
+    \[ S^T \cdot S = \begin{bmatrix}
+        \cos^2 \alpha + \sin^2 \alpha & 0 \\
+        0 & \cos^2 \alpha + \sin^2 \alpha
+        \end{bmatrix} = I \]
+    Thus $S$ is orthogonal.
+    \\
+    (b)The proof is as follows:\\
+    Considering $B = SAS^T$, we have 
+    \[ B = \begin{bmatrix}
+        \cos \alpha & \sin \alpha \\
+        -\sin \alpha & \cos \alpha
+        \end{bmatrix} \begin{bmatrix}
+        a_{11} & a_{12} \\
+        a_{21} & a_{22}
+        \end{bmatrix} \begin{bmatrix}
+        \cos \alpha & -\sin \alpha \\
+        \sin \alpha & \cos \alpha
+        \end{bmatrix} \]
+    Expanding the above expression, we get
+    \[ B = \begin{bmatrix}
+        \cos \alpha & \sin \alpha \\
+        -\sin \alpha & \cos \alpha
+        \end{bmatrix} \begin{bmatrix}
+        a_{11}\cos \alpha + a_{12}\sin \alpha & -a_{11}\sin \alpha + a_{12}\cos \alpha \\
+        a_{21}\cos \alpha + a_{22}\sin \alpha & -a_{21}\sin \alpha + a_{22}\cos \alpha
+        \end{bmatrix} \]
+    We obtain
+    \[ B = \begin{bmatrix}
+        a_{11}\cos^2 \alpha + 2a_{12}\cos \alpha \sin \alpha + a_{22}\sin^2 \alpha & (a_{22} - a_{11})\cos \alpha \sin \alpha + a_{12}(\cos^2 \alpha - \sin^2 \alpha) \\
+        (a_{22} - a_{11})\cos \alpha \sin \alpha + a_{12}(\cos^2 \alpha - \sin^2 \alpha) & a_{11}\sin^2 \alpha - 2a_{12}\cos \alpha \sin \alpha + a_{22}\cos^2 \alpha
+        \end{bmatrix} \]
+    Since $B$ is diagonal, the off-diagonal elements must be zero. Therefore, we have
+    \[ (a_{22} - a_{11})\cos \alpha \sin \alpha + a_{12}(\cos^2 \alpha - \sin^2 \alpha) = 0 \]
+    \[ (a_{22} - a_{11}) + a_{12}\tan(2\alpha) = 0 \]
+    \[ \tan(2\alpha) = \frac{2a_{12}}{a_{11} - a_{22}} \]
+    Thus, we have proved that if $\tan(2\alpha) = \frac{2a_{12}}{a_{11} - a_{22}}$, then $B = SAS^T$ is diagonal.
+    (c) Verify that Tr[B] = Tr[A].
+    \[ Tr[B] = Tr[SAS^T] = Tr[ASS^T] = Tr[AI] = Tr[A] \]
+    Thus, we have proved that Tr[B] = Tr[A].
+\end{solution}
+%第三题
+\begin{solution}
+    \\
+    Let $F$ be the event that the coin picked is fair, and $H$ be the event that heads shows both times. We want to find $P(F|H)$.
+    \[ P(F|H) = \frac{P(F \cap H)}{P(H)} \]
+    \[ P(F \cap H) = P(F) \cdot P(H|F) = \frac{1}{2} \cdot \frac{1}{4} = \frac{1}{8} \]
+    \[ P(H) = P(F) \cdot P(H|F) + P(F^c) \cdot P(H|F^c) = \frac{1}{2} \cdot \frac{1}{4} + \frac{1}{2} \cdot 1 = \frac{5}{8} \]
+    Thus, we have
+    \[ P(F|H) = \frac{P(F \cap H)}{P(H)} = \frac{1}{5} \]
+\end{solution}
+%第四题
+\begin{solution}
+\\Let $D_A$ be the event that a bulb is defective from Box A.  
+\\Let $D_B$ be the event that a bulb is defective from Box B.
+\\(a)The probability that both bulbs are defective can be calculated as:
+\[ P(\text{both defective}) = P(\text{both defective from A}) + P(\text{both defective from B}) \]
+\[ = P(D_A \cap D_A) + P(D_B \cap D_B) = P(D_A)^2 + P(D_B)^2 \]
+\[ = (0.1)^2 + (0.05)^2 = 0.01 + 0.0025 = 0.0125 \]
+Therefore, the probability that both bulbs are defective is $0.0125$.
+\\(b) Using Bayes' theorem:
+\[ P(\text{Box A | both defective}) = \frac{P(\text{both defective | Box A}) * P(\text{Box A})}{P(\text{both defective})} \]
+\[ = \frac{0.01 * 0.5}{0.0125} = \frac{2}{5}\]
+\\If both are defective, the probability that they come from box A is 0.4.
+\end{solution}
+\end{document}
+
