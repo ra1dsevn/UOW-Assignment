@@ -1,0 +1,56 @@
+1.  Data mining的过程process:
+	Data mining is the process of discovering patterns in large data sets involving methods at the intersection of machine learning, statistics, and database systems.
+
+	Knowledge discovery consists of the following steps:
+	(1) Data cleaning to remove noise and inconsistent data
+	(2) Data integration to combine multiple data sources
+	(3) Data selection to retrieve data from databases
+	(4) Data transformation to get data into forms appropriate for data mining
+	(5) Data mining to extract data patterns
+	(6) Pattern evaluation to identify interesting patterns
+	(7) Knowledge presentation to present mined knowledge to the users
+
+	Descriptive and predictive models and tasks
+	Descriptive: 
+	Clustering, Summarization, Association Rules, Sequence Discovery.
+	Examples: Predict future values in stock market,electricity consumption, …
+
+	Predictive: 
+	Classfication, Regression, Time Series Analysis, Prediction.
+
+
+2.  Visualization用R语言去写代码
+	用哪种visualization
+	individual variable的visualization
+	two variables的visualization
+	multi variables的visualization
+	完全写代码 不用伪代码
+
+3.	Kmeans写伪代码，给数据用Kmeans聚类，clustering很重要
+
+4.  classification里面最重要的是MLP,
+MLP如何forward, backward，以及BP算法细节
+如何计算，参数更新，权重系数更新，要求会算系数 总结一下
+Aporori算法，频繁相集计算（在06里） 总结一下
+If |L| = k, then there are 2^k – 2 candidate association rules
+
+今天完成：
+SVM中Linear SVM, Soft-margin classifier, Non-linear SVM and the kernel trick这几类的应用场景
+
+Decision Tree如何构建，Regression Tree这俩🌲掌握
+Regression：
+Linear regression中两种解法
+
+考试都是问答题，无选择填空。6个Question，每个Question10分，对应6个主题
+带计算器...
+SOM不考
+BP算法所有细节，Kmeans细节
+KNN考
+ROC考
+	Big data和data learning不考
+
+
+在实践中:
+输出神经元通常使用softmax激活函数。
+隐藏的神经元总是使用非线性激活 作用最常见的是ReLU
+

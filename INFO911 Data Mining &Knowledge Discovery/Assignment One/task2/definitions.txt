@@ -1,0 +1,103 @@
+functionary
+
+0:no
+
+1:yes
+
+
+
+re-balanced (paid back) a recently overdrawn current acount
+
+0:no
+
+1:yes
+
+
+
+FICO credit score
+
+0:not ok
+
+1:ok
+
+
+
+gender
+
+0:male
+
+1:female
+
+
+
+credit refused in past
+
+0:no
+
+1:yes
+
+
+
+years employed
+
+1:<1
+
+2:<2
+
+3:<5
+
+4:<10
+
+5:>10
+
+
+account balance
+1:<100
+
+2:<1.000
+
+3:<7.500
+
+4:<10.000
+
+5:<20.000
+
+6:>20.000
+
+
+
+self employed
+
+0:no
+
+1:yes
+
+
+
+max. account balance X months ago
+
+1:<100
+
+2:<1.000
+
+3:<7.500
+
+4:<10.000
+
+5:<20.000
+
+6:>20.000
+
+
+
+credit rating
+
+0:No credit
+
+1:A
+
+2:B
+
+3:C
+
+
