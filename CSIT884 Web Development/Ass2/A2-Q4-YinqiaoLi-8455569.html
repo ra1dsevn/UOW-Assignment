@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2-Task4-YourStudentName-YourStudentNumber</title>
+    <style>
+        .image-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        img {
+            cursor: pointer;
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Order Changer</h1>
+    <div class="image-container" id="imageContainer">
+        <img src="/Users/liyinqiao/Library/Mobile Documents/com~apple~CloudDocs/研二上各课程/884 Web Development/Ass2/Q4/Full name.png" alt="Full Name" onclick="moveLeft(this)">
+        <img src="/Users/liyinqiao/Library/Mobile Documents/com~apple~CloudDocs/研二上各课程/884 Web Development/Ass2/Q4/SN.png" alt="UOW SN" onclick="moveLeft(this)">
+        <img src="/Users/liyinqiao/Library/Mobile Documents/com~apple~CloudDocs/研二上各课程/884 Web Development/Ass2/Q4/CCNU SN.png" alt="CCNU SN" onclick="moveLeft(this)">
+    </div>
+
+    <script>
+        function moveLeft(imgElement) {
+            const container = document.getElementById('imageContainer');
+            const currentIndex = Array.from(container.children).indexOf(imgElement);
+
+            if (currentIndex > 0) {
+                container.insertBefore(imgElement, container.children[currentIndex - 1]);
+            }
+        }
+    </script>
+</body>
+</html>

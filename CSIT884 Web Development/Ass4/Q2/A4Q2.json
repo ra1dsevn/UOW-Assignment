@@ -1,0 +1,93 @@
+{
+  "login_report_date": "2023/09/20",
+  "device_name": "Sydney",
+  "users": [
+    {
+      "username": "aw321",
+      "name": "Anna Wright",
+      "group": "Student",
+      "login": [
+        {
+          "timestamp": "2023/08/30 04:50:50",
+          "status": "success"
+        },
+        {
+          "timestamp": "2023/09/01 01:30:56",
+          "status": "fail"
+        },
+        {
+          "timestamp": "2023/09/01 02:00:10",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "username": "jasonm",
+      "name": "Jason Mill",
+      "group": "Staff",
+      "login": [
+        {
+          "timestamp": "2023/08/28 14:05:23",
+          "status": "success"
+        },
+        {
+          "timestamp": "2023/09/01 09:25:33",
+          "status": "fail"
+        }
+      ]
+    },
+    {
+      "username": "wl738",
+      "name": "Wenbin Liu",
+      "group": "Student",
+      "login": [
+        {
+          "timestamp": "2023/08/31 05:50:50",
+          "status": "success"
+        },
+        {
+          "timestamp": "2023/09/01 01:30:56",
+          "status": "fail"
+        },
+        {
+          "timestamp": "2023/09/11 02:00:",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "username": "wu654",
+      "name": "Johnny",
+      "group": "Student",
+      "login": [
+        {
+          "timestamp": "2023/08/30 03:50:50",
+          "status": "success"
+        },
+        {
+          "timestamp": "2023/09/01 01:33:56",
+          "status": "fail"
+        },
+        {
+          "timestamp": "2023/09/01 02:45:10",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "username": "your_username",
+      "name": "Your Name",
+      "group": "Your Group",
+      "login": [
+        {
+          "timestamp": "YYYY/MM/DD HH:MM:SS",
+          "status": "success/fail"
+        },
+        {
+          "timestamp": "YYYY/MM/DD HH:MM:SS",
+          "status": "success/fail"
+        }
+      ]
+    }
+  ]
+}

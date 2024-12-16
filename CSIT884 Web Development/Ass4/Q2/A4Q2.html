@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login Report</title>
+</head>
+<body>
+<button id="getLoginReport">Get Login Report</button>
+<div id="reportContainer"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $("#getLoginReport").click(function() {
+        $.ajax({
+          url: "A4Q2.json",
+          dataType: "json",
+          success: function(data) {
+            var report = generateReport(data);
+            $("#reportContainer").html(report);
+          },
+          error: function() {
+            alert("Error retrieving login report.");
+          }
+        });
+      });
+
+      function generateReport(data) {
+        var report = "<h2>Login Report</h2>";
+
+        for (var i = 0; i < data.users.length; i++) {
+          var user = data.users[i];
+          report += "<h3>Username: " + user.username + ", Name: " + user.name + "</h3>";
+          report += "<p>Group: " + user.group + "</p>";
+          report += "<ul>";
+
+          for (var j = 0; j < user.login.length; j++) {
+            var login = user.login[j];
+            report += "<li>Timestamp: " + login.timestamp + ", Status: " + login.status + "</li>";
+          }
+
+          report += "</ul>";
+        }
+
+        return report;
+      }
+    });
+  </script>
+</body>
+</html>

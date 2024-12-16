@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3-Q3-YinqiaoLi-8455569</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .clickable-text {
+            color: orange;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .clickable-blue {
+            color: blue;
+        }
+        input[type="text"] {
+            width: 300px;
+            height: 30px;
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="displayField" readonly>
+    <div>
+        <div class="clickable-text clickable-blue" id="showEmail">
+            Show UOW email and number (yl800@uowmail.edu.au, 8455569)
+        </div>
+        <div class="clickable-text" id="showName">
+            Show full name and number (Yinqiao Li, 8455569)
+        </div>
+    </div>
+
+    <script>
+        let currentNumber = 8455569;
+        const displayField = document.getElementById('displayField');
+        const showEmail = document.getElementById('showEmail');
+        const showName = document.getElementById('showName');
+
+        showEmail.addEventListener('click', () => {
+            displayField.value = `yl800@uowmail.edu.au, ${currentNumber}`;
+            currentNumber++;
+        });
+
+        showName.addEventListener('click', () => {
+            displayField.value = `Yinqiao Li, ${currentNumber}`;
+            currentNumber++;
+        });
+    </script>
+</body>
+</html>

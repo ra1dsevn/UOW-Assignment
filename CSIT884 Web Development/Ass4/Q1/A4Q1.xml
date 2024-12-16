@@ -1,0 +1,38 @@
+<!DOCTYPE report>
+<report>
+    <heading>Login Report 2023/09/20</heading>
+
+    <device_name>Sydeny</device_name>
+
+    <user>
+        <username>aw321</username>
+        <name>Anna Wright</name>
+        <group>Student</group>
+        <login>
+            <record>2023/08/30 04:50:50: success</record>
+            <record>2023/09/01 01:30:56: fail</record>
+            <record>2023/09/01 02:00:10: fail</record>
+        </login>
+    </user>
+
+    <user>
+        <username>jasonm</username>
+        <name>Jason Mill</name>
+        <>Staff</group>
+        <login>
+            <record>3/08/2814:05:23: success</record>
+            <record>2023/09/01 09:25:33: fail</record>
+        </login>
+    </user>
+
+    <user>
+        <username>Johnny</username>
+        <name>Wenbin Liu</name>
+        <group>Student</group>
+        <login>
+            <record>2023/07/30 04:50:50: success</record>
+            <record>2023/09/01 01:33:56: fail</record>
+            <record>2023/09/01 02:30:10: fail</record>
+        </login>
+    </user>
+</report>

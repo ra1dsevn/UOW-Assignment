@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Display - Yinqiao Li</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label, input, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+        }
+        button {
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <label for="name">Enter student name:</label>
+    <input type="text" id="name" placeholder="Yinqiao Li">
+
+    <label for="email">Enter student email:</label>
+    <input type="email" id="email" placeholder="yl800@uowmail.edu.au">
+
+    <label for="number">Enter student number:</label>
+    <input type="text" id="number" placeholder="8455569">
+
+    <label for="bgColor">Enter background color:</label>
+    <input type="text" id="bgColor" placeholder="lightblue">
+
+    <label for="fontSize">Enter font size:</label>
+    <input type="text" id="fontSize" placeholder="16px">
+
+    <label for="textColor">Enter text color:</label>
+    <input type="text" id="textColor" placeholder="black">
+
+    <button onclick="displayInfo()">Display student information</button>
+
+    <div id="output"></div>
+
+    <script>
+        function displayInfo() {
+            const name = document.getElementById('name').value || 'Yinqiao Li';
+            const email = document.getElementById('email').value || 'yl123@uowmail.edu.au';
+            const number = document.getElementById('number').value || '8455569';
+            const bgColor = document.getElementById('bgColor').value || 'lightblue';
+            const fontSize = document.getElementById('fontSize').value || '16px';
+            const textColor = document.getElementById('textColor').value || 'black';
+
+            const output = document.getElementById('output');
+            output.style.backgroundColor = bgColor;
+            output.style.fontSize = fontSize;
+            output.style.color = textColor;
+            output.innerHTML = `${number} ${name} ${email}`;
+        }
+    </script>
+</body>
+</html>

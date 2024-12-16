@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyChoice Restaurant Reservation</title>
+</head>
+<body>
+    <h1>Restaurant Reservation Form</h1>
+    <form action="http://mychoice55.com/query" method="GET">
+        <label for="rest">Choose a Restaurant:</label><br>
+        <select id="rest" name="rest">
+            <option value="1">MyTime-Wollongong</option>
+            <option value="2">PerfectDish-Kiama</option>
+            <option value="3">DinerOut-Buli</option>
+            <option value="4">SpotOn-Shellharbour</option>
+        </select><br><br>
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="num">Number of Guests:</label><br>
+        <input type="number" id="num" name="num" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="slot">Preferred Time Slot:</label><br>
+        <input type="text" id="slot" name="slot" required><br><br>
+
+        <label for="req">Special Requirements:</label><br>
+        <textarea id="req" name="req" rows="4" cols="50"></textarea><br><br>
+
+        <label for="comm">Preferred Method of Communication:</label><br>
+        <input type="text" id="comm" name="comm" required><br><br>
+
+        <input type="submit" value="Submit Reservation">
+    </form>
+</body>
+</html>

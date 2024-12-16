@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Generator - Yinqiao Li</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label, input, textarea, button {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        input, textarea {
+            padding: 5px;
+        }
+        textarea {
+            height: 200px;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <label for="firstName">Enter your first name:</label>
+    <input type="text" id="firstName" placeholder="Yinqiao">
+
+    <label for="lastName">Enter your last name:</label>
+    <input type="text" id="lastName" placeholder="Li">
+
+    <label for="homeTown">Enter your home town:</label>
+    <input type="text" id="homeTown" placeholder="Wollongong">
+
+    <textarea id="jsonOutput" readonly></textarea>
+
+    <button onclick="generateJSON()">Generate JSON</button>
+
+    <script>
+        function generateJSON() {
+            const firstName = document.getElementById('firstName').value || 'Yinqiao';
+            const lastName = document.getElementById('lastName').value || 'Li';
+            const homeTown = document.getElementById('homeTown').value || 'Wollongong';
+
+            const data = {
+                firstName: firstName,
+                lastName: lastName,
+                homeTown: homeTown
+            };
+
+            const jsonString = JSON.stringify(data, null, 2);
+            document.getElementById('jsonOutput').value = jsonString;
+        }
+    </script>
+</body>
+</html>

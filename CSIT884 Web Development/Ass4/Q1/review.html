@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q1</title>
+    <script>
+        let interval = null; // timer
+        const emojis = ['😀', '😃', '😄', '😁', '😆', '😅']; // emojis list
+        let num1 = 0;
+        let num2 = 1;
+
+        // Start the animation process
+        function startAnimation() {
+            initialContent();
+            interval = setInterval(updateContent, 1000);
+        }
+
+        // Initial the displayDiv
+        function initialContent() {
+            num1 = Math.floor(Math.random() * 1000) + 1;
+            num2 = 1;
+            document.getElementById("displayDiv").style.display = "block";
+            document.getElementById("first_num").innerHTML = num1;
+            document.getElementById("second_num").innerHTML = num2;
+            document.getElementById("result").innerHTML = num1 * num2;
+            document.getElementById("emoji").innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+        }
+
+        // Update the displayDiv per second
+        function updateContent() {
+            num2 += 0.5;
+            document.getElementById("second_num").innerHTML = num2;
+            document.getElementById("result").innerHTML = num1 * num2;
+            document.getElementById("emoji").innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+        }
+
+        // Stop the animation process
+        function stopAnimation() {
+            clearInterval(interval);
+            interval = null;
+        }
+    </script>
+</head>
+<body>
+    <h1>Animation</h1>
+
+    <!--Start button & Stop button-->
+    <button onclick="startAnimation()">Start</button>
+    <button onclick="stopAnimation()">Stop</button>
+    <br> <br>
+
+    <!--Display field-->
+    <div style="display: none" id="displayDiv">
+        <span id="first_num"></span> *
+        <span id="second_num"></span> =
+        <span id="result"></span>
+        <span id="emoji"></span>
+    </div>
+</body>
+</html>
