@@ -1,47 +1,67 @@
+```markdown
 # UOW-Assignment
 
-本仓库收录了我在UOW-JI研究生阶段各门课程的部分作业、项目代码和学习资料，涵盖数据结构、数据库系统、机器学习、网络安全、项目管理等多个领域。
+📚 本仓库收录了我在UOW-JI研究生阶段各门课程的作业、项目代码与学习资料，覆盖了从数据结构与算法、数据库系统，到机器学习、网络安全、项目管理等多个核心领域。
 
-## 📁 项目结构
+📚 This repository contains my coursework, assignments, and projects completed during my postgraduate studies at the University of Wollongong. It covers key topics such as data structures and algorithms, database systems, machine learning, cybersecurity, and project management.
 
-各课程按课程代码划分目录，示例包括但不限于：
+---
 
-- `CSCI933 Machine Learning`：机器学习课程，涵盖分类、回归、聚类等模型的实现。
-- `CSCI944 Perception and Planning`：感知与路径规划相关内容。
-- `CSCI946 Big Data Analytics`：使用Spark、Hadoop等进行大数据处理与分析。
-- `CSCI971 Cryptography`：对称加密、公钥加密、哈希函数等密码学原理与实验。
-- `CSCI985 Strategic Network Design`：网络拓扑设计与策略分析。
-- `CSIT881 Data Structure Python`：常见数据结构（树、图、堆等）的Python实现。
-- `CSIT882 Database System`：数据库设计、SQL查询与事务管理。
-- `CSIT883 Project Management`：项目进度、资源与风险管理分析。
-- `CSIT884 Web Development`：Web开发项目，使用HTML/CSS/JS或框架。
-- `CSIT940 Research Methodology`：科研方法、文献综述和研究设计。
-- `CSIT988 Ethics Security and Professionalism`：职业伦理、安全隐患分析。
-- `INFO911 Data Mining & Knowledge Discovery`：分类、聚类、关联规则挖掘等方法的应用。
+## 📁 项目结构 | Project Structure
 
-## 🧠 主要工作内容
+```plaintext
+CSCI933  - Machine Learning（机器学习）
+CSCI944  - Perception and Planning（感知与规划）
+CSCI946  - Big Data Analytics（大数据分析）
+CSCI971  - Cryptography（密码学）
+CSCI985  - Strategic Network Design（战略网络设计）
+CSIT881  - Data Structures in Python（Python 数据结构）
+CSIT882  - Database System（数据库系统）
+CSIT883  - Project Management（项目管理）
+CSIT884  - Web Development（Web开发）
+CSIT940  - Research Methodology（研究方法论）
+CSIT988  - Ethics, Security and Professionalism（职业伦理与安全）
+INFO911  - Data Mining & Knowledge Discovery（数据挖掘与知识发现）
+```
 
-本项目反映了我在研究生阶段课程中的以下学习与实践成果：
+---
 
-- 算法实现与数据结构构建
-- SQL数据库设计与数据管理
-- 机器学习模型训练与调参
-- Web前后端开发实践
-- 网络安全与加密技术分析
-- 大数据处理与可视化
-- 项目管理计划制定与执行
-- 研究方法与学术写作训练
+## 🧠 主要工作内容 | Key Work Areas
 
-## ⚠️ 学术诚信声明
+- ✅ **算法与数据结构实现** | Algorithm & Data Structure Implementation  
+- ✅ **SQL 数据库建模与查询** | Database Design and SQL Querying  
+- ✅ **机器学习模型训练与测试** | Machine Learning Model Training & Evaluation  
+- ✅ **前后端 Web 应用开发** | Full-Stack Web Application Development  
+- ✅ **大数据处理与可视化** | Big Data Processing & Visualization  
+- ✅ **加密算法与安全分析** | Cryptography and Security Analysis  
+- ✅ **项目计划与管理文档编写** | Project Planning & Documentation  
+- ✅ **学术研究写作与方法论训练** | Academic Writing & Research Methodology  
 
-**本仓库仅供个人学习和参考。严禁将其中内容直接复制粘贴用于提交作业或项目报告。**
+---
 
-请严格遵守你所在学校的学术诚信政策：
+## ⚠️ 学术诚信声明 | Academic Integrity Notice
 
-- 所有课程作业应由个人独立完成；
-- 使用本仓库内容必须注明引用来源；
-- 抄袭、剽窃、未经授权使用将被视为学术不端。
+> 📌 所有资料仅供学习参考，严禁抄袭、剽窃或直接提交。请遵守所属学校的学术道德规范。
 
-## 📄 License
+> 📌 All content in this repository is provided for **learning and reference purposes only**. Any **plagiarism or direct copying** of this work for submission is strictly prohibited.
 
-本项目未指定开源协议，默认保留所有权利。如需使用其中内容，请联系作者获得许可。
+请确保：
+
+- ✅ 独立完成作业，合理引用参考内容；
+- ✅ 不将本项目中的代码或文档用于未经授权的用途；
+- ✅ 遵守所在机构的学术诚信政策。
+
+Make sure to:
+
+- ✅ Complete your assignments independently and cite properly;
+- ✅ Do **not** use any code or documentation here without proper permission;
+- ✅ Follow your institution's academic integrity rules.
+
+---
+
+## 📄 License | 许可协议
+
+未指定开源协议，默认保留所有权利。如需引用或转载，请联系作者。
+
+This project is not under an open-source license. All rights reserved. Contact the author for permission to reuse or redistribute any part.
+```
